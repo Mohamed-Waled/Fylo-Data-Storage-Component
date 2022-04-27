@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root {
+    --gradient-from: hsl(6, 100%, 80%);
+    --gradient-to: hsl(6, 100%, 80%);
+    --background-color: hsl(229, 57%, 11%);
+    --boxes-color: hsl(228, 56%, 26%);
+    
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--background-color);
+    background-image: url(../images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 100% 420px;
+    background-position: 0% 101%;
+}
+
+.container {
+    width: 100%;
+    height: 98vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 900px;
+    height: 200px;
+    display: flex;
+}
+
+.box-1 {
+    width: 350px;
+    height: 200px;
+    background-color: var(--boxes-color);
+    border-radius: 10px 100px 10px 10px;
+    padding: 40px;
+}
+
+.box-1 .icons {
+    display: flex;
+    margin-top: 30px;
+}
+
+.icon-1,
+.icon-2,
+.icon-3 {
+    width: 50px;
+    height: 50px;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.box-2 {
+    width: 525px;
+    height: 150px;
+    background-color: var(--boxes-color);
+    margin: 50px 0 0 25px;
+    border-radius: 10px;
+    padding: 35px;
+    position: relative;
+}
+
+.box-2 p {
+    color: hsl(229, 7%, 55%);
+    font-size: 14px;
+}
+
+.box-2 span {
+    font-weight: 700;
+    color: hsl(243, 100%, 93%);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: var(--background-color);
+    margin-top: 20px;
+    border-radius: 50px;
+    position: relative;
+    padding: 3px;
+}
+
+.left {
+    position: absolute;
+    width: 175px;
+    height: 75px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -30%;
+    right: 8%;
+    border-radius: 10px;
+}
+
+.left::before {
+    content: "";
+    border: 30px solid;
+    border-color: transparent white transparent transparent;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.left p {
+    text-transform: uppercase;
+}
+
+.left p span {
+    font-weight: 700;
+    color: var(--background-color);
+    font-size: 40px;
+}
+
+.box-2 .progress {
+    display: block;
+    position: relative;
+    width: 75%;
+    height: 100%;
+    border-radius: 50px;
+    background: linear-gradient(to right, var(--gradient-to) 0%, var(--gradient-from) 100%);
+}
+
+.progress-ball {
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: hsl(243, 100%, 93%);
+    right: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nums {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.first,
+.second {
+    color: hsl(243, 100%, 93%);
+    font-size: 12px;
+}
+
+footer { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+footer a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 426px) {
+    body {
+        font-family: 'Raleway', sans-serif;
+        background-color: var(--background-color);
+        background-image: url(../images/bg-mobile.png);
+        background-repeat: no-repeat;
+        background-size: 425px 800px;
+        background-position: unset;
+    }
+    
+    .box {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .box-2 {
+        width: 350px;
+        margin: 25px auto;
+    }
+    
+    .left {
+        top: 75%;
+        right: 25%;
+    }
+    
+    .left::before {
+        border: unset;
+    }
+}
+
+@media (max-width: 321px) {
+    body {
+        font-family: 'Raleway', sans-serif;
+        background-color: var(--background-color);
+        background-image: url(../images/bg-mobile.png);
+        background-repeat: no-repeat;
+        background-size: 320px 800px;
+        background-position: unset;
+    }
+    
+    .box {
+        width: 90%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box-1 {
+        width: 95%;
+    }
+    
+    .box-2 {
+        width: 95%;
+        margin: 25px auto;
+    }
+
+    .box-2 p {
+        font-size: 12px;
+    }
+    
+    .left {
+        width: 125px;
+        height: 50px;
+        top: 75%;
+        right: 30%;
+    }
+    
+    .left p span {
+        font-size: 25px;
+    }
+    
+    .left::before {
+        border: unset;
+    }
+
+    footer { 
+        font-size: 10px; 
+    }
+}
